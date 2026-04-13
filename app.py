@@ -8,7 +8,7 @@ from email.mime.multipart import MIMEMultipart
 # --- 1. SETTINGS & CREDENTIALS (THE SECRETS VAULT) ---
 # We are now pulling these securely from Streamlit Cloud!
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-model = genai.GenerativeModel("gemini-1.5-flash", generation_config={"temperature": 0.0})
+model = genai.GenerativeModel("gemini-2.5-flash", generation_config={"temperature": 0.0})
 
 SENDER_EMAIL = st.secrets["SENDER_EMAIL"]
 APP_PASSWORD = st.secrets["APP_PASSWORD"]
