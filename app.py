@@ -54,13 +54,19 @@ st.set_page_config(page_title="Uchenna AI Grader", page_icon="🎓", layout="cen
 
 st.markdown("""
     <style>
-    .stApp { background-color: #0f172a; color: white; font-family: 'Helvetica Neue', sans-serif; }
+ .stApp { background-color: #0f172a; color: white; font-family: 'Helvetica Neue', sans-serif; }
     h1 { color: #ffffff !important; text-align: center; margin-bottom: 25px; }
     label, .stSelectbox label p, .stFileUploader label p { color: white !important; font-weight: bold !important; text-align: left !important; margin-top: 15px; }
     .input-container { display: flex; flex-direction: column; gap: 10px; margin-bottom: 25px; }
     [data-testid="stFileUploadDropzone"] { background-color: #1e293b; border: 2px dashed #38bdf8; border-radius: 15px; padding: 20px; transition: background-color 0.3s ease; }
     [data-testid="stFileUploadDropzone"]:hover { background-color: #334155; }
     #note-background { background-color: #7b211f; color: white; border-radius: 8px; padding: 15px; font-weight: bold; text-align: center; margin-top: 20px; border: 1px solid #ff4d4d; }
+    
+    /* Hide Streamlit default menus and watermarks */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    
     </style>
 """, unsafe_allow_html=True)
 
