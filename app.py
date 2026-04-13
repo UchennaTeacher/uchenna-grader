@@ -8,7 +8,7 @@ from email.mime.multipart import MIMEMultipart
 # --- 1. SETTINGS & CREDENTIALS (THE SECRETS VAULT) ---
 # We are now pulling these securely from Streamlit Cloud!
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-model = genai.GenerativeModel("gemini-2.5-flash", generation_config={"temperature": 0.0})
+model = genai.GenerativeModel("gemini-1.5-flash", generation_config={"temperature": 0.0})
 
 SENDER_EMAIL = st.secrets["SENDER_EMAIL"]
 APP_PASSWORD = st.secrets["APP_PASSWORD"]
@@ -50,7 +50,7 @@ def send_grading_email(student_name, subject, ai_report):
         return False
 
 # --- 3. WEBSITE DESIGN SETUP ---
-st.set_page_config(page_title="Uchenna AI Grader", page_icon="🎓", layout="centered")
+st.set_page_config(page_title="Uchenna Academy Grader", page_icon="🎓", layout="centered")
 
 st.markdown("""
     <style>
